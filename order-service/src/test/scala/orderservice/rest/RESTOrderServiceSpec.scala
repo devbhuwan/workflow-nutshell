@@ -11,7 +11,7 @@ import org.scalatest.junit.JUnitRunner
 @RunWith(classOf[JUnitRunner])
 class RESTOrderServiceSpec extends RESTAbstractSpec {
 
-  "GET /orders" should "RETURN Arrays of Orders" in {
+  "GET /orders" should "RETURN Arrays of Order" in {
     assert(1 == 1)
   }
 
