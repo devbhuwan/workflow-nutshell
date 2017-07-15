@@ -19,7 +19,8 @@ appLibs += [
         janino : "org.codehaus.janino:janino:$janinoVersion",
         scalaLibrary: "org.scala-lang:scala-library:$scalaVersion",
         scalaTest: "org.scalatest:scalatest_2.12:$scalaTestVersion",
-        pegdownTest: "org.pegdown:pegdown:$pegdownVersion"
+        pegdownTest: "org.pegdown:pegdown:$pegdownVersion",
+        sprayTestKit: "io.spray:spray-testkit:$sprayTestKitVersion"
 ]
 
 appPlugins += [
