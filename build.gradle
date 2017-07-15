@@ -5,6 +5,9 @@ buildscript {
         mavenLocal()
         jcenter()
     }
+    dependencies {
+        classpath "gradle.plugin.com.github.maiflai:gradle-scalatest:0.16"
+    }
 }
 
 plugins {

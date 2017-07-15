@@ -17,7 +17,9 @@ appLibs += [
         jaxRs2Api: "javax.ws.rs:javax.ws.rs-api:$jaxRs2ApiVersion",
         logbackLogstashEncoder: "net.logstash.logback:logstash-logback-encoder:$logbackLogstashEncoderVersion",
         janino : "org.codehaus.janino:janino:$janinoVersion",
-        scalaLibrary: "org.scala-lang:scala-library:$scalaVersion"
+        scalaLibrary: "org.scala-lang:scala-library:$scalaVersion",
+        scalaTest: "org.scalatest:scalatest_2.11:$scalaTestVersion",
+        pegdownTest: "org.pegdown:pegdown:$pegdownVersion"
 ]
 
 appPlugins += [

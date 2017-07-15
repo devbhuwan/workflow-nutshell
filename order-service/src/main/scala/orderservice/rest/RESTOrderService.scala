@@ -1,6 +1,7 @@
 package orderservice.rest
 
-import org.springframework.web.bind.annotation.{GetMapping, RequestMapping, RestController}
+import orderservice.model.OrderDTO
+import org.springframework.web.bind.annotation.{GetMapping, RequestBody, RequestMapping, RestController}
 
 /**
   * @author Bhuwan Upadhyay
@@ -13,6 +14,10 @@ class RESTOrderService {
   @GetMapping
   def greeting(): String = {
     "greeting"
+  }
+
+  def newOrder(@RequestBody order: OrderDTO): Unit = {
+
   }
 
 }
