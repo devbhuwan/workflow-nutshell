@@ -1,8 +1,7 @@
 package orderservice.rest
 
-import org.junit.Test
 import org.junit.runner.RunWith
-import org.scalatest.{FlatSpec, FunSuite}
+import org.scalatest.FlatSpec
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 
@@ -12,8 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner
   */
 @RunWith(classOf[SpringRunner])
 @SpringBootTest
-class RESTOrderServiceSpec extends FlatSpec  {
-
-
+class RESTOrderServiceSpec extends FlatSpec {
 
 }
