@@ -1,16 +1,18 @@
 package orderservice.rest
 
 import org.junit.runner.RunWith
-import org.scalatest.FlatSpec
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 
 /**
   * @author Bhuwan Upadhyay
-  * @date 2017/07/15
+  *
   */
+
 @RunWith(classOf[SpringRunner])
-@SpringBootTest
-class RESTOrderServiceSpec extends FlatSpec {
+class RESTOrderServiceSpec extends RESTAbstractSpec {
+
+  "GET /orders" should "" in {
+    assert(1 == 1)
+  }
 
 }
