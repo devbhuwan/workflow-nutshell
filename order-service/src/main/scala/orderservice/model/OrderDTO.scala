@@ -6,7 +6,7 @@ import scala.beans.BeanProperty
 
 /**
   * @author Bhuwan Upadhyay
-  * @date 2017/07/15
+  *
   */
 @JsonIgnoreProperties(ignoreUnknown = true)
 class OrderDTO {

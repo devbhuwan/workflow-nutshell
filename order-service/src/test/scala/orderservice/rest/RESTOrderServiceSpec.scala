@@ -1,14 +1,14 @@
 package orderservice.rest
 
 import org.junit.runner.RunWith
-import org.springframework.test.context.junit4.SpringRunner
+import org.scalatest.junit.JUnitRunner
 
 /**
   * @author Bhuwan Upadhyay
   *
   */
 
-@RunWith(classOf[SpringRunner])
+@RunWith(classOf[JUnitRunner])
 class RESTOrderServiceSpec extends RESTAbstractSpec {
 
   "GET /orders" should "" in {
