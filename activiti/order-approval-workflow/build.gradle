@@ -5,6 +5,8 @@ apply plugin: "com.github.maiflai.scalatest"
 dependencies {
     compile("$appLibs.scalaLibrary")
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.activiti:activiti-spring-boot-starter-basic:$activitiVersion")
+    compile("org.activiti:activiti-spring-boot-starter-rest-api:$activitiVersion")
     compile("com.h2database:h2")
     testCompile("$appLibs.scalaTest")
     testRuntime("$appLibs.pegdownTest")
