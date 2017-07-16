@@ -8,6 +8,9 @@ gretty {
     contextPath = '/activiti'
 }
 
+def warPath= '/home/bhuwan/Downloads/activiti-6.0.0/wars'
+
 farm {
-    webapp '/home/bhuwan/Downloads/activiti-6.0.0/wars/activiti-admin.war'
+    webapp "${warPath}/activiti-admin.war"
+    webapp "${warPath}/activiti-app.war"
 }
