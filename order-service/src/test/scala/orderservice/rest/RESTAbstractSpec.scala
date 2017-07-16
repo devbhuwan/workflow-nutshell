@@ -1,8 +1,8 @@
 package orderservice.rest
 
+import akka.http.scaladsl.testkit.Specs2RouteTest
 import org.scalatest._
 import org.scalatest.prop.Configuration
-import spray.testkit.Specs2RouteTest
 
 /**
   * @author Bhuwan Upadhyay
