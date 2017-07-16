@@ -1,0 +1,10 @@
+camunda:
+  bpm:
+    auto-deployment-enabled: true
+    admin-user:
+      id: admin
+      password: admin
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+

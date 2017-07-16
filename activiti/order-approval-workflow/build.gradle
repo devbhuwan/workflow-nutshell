@@ -1,0 +1,15 @@
+apply plugin: "org.springframework.boot"
+apply plugin: 'scala'
+apply plugin: "com.github.maiflai.scalatest"
+
+dependencies {
+    compile("$appLibs.scalaLibrary")
+    compile("$appLibs.scalaTest")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("com.h2database:h2")
+    compile("org.camunda.bpm.extension.springboot:camunda-bpm-spring-boot-starter-rest:$camundaVersion")
+    compile("org.camunda.bpm.extension.springboot:camunda-bpm-spring-boot-starter-test:$camundaVersion")
+    testRuntime("$appLibs.pegdownTest")
+    testCompile("$appLibs.akkaHttpTestKit")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
