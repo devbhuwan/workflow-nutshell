@@ -9,7 +9,7 @@ import scala.beans.BeanProperty
   *
   */
 @JsonIgnoreProperties(ignoreUnknown = true)
-class OrderDTO {
+class Order {
   @BeanProperty
   var id: Long = _
   @BeanProperty

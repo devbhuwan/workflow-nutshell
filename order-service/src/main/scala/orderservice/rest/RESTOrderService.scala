@@ -1,23 +1,30 @@
 package orderservice.rest
 
-import orderservice.model.OrderDTO
-import org.springframework.web.bind.annotation.{GetMapping, RequestBody, RequestMapping, RestController}
+import java.util.UUID
+
+import orderservice.model.Order
+import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation._
+
+import scala.collection.mutable
 
 /**
   * @author Bhuwan Upadhyay
-  * @date 2017/07/15
+  *
   */
 @RestController
 @RequestMapping(value = Array("orders"))
 class RESTOrderService {
 
+  val orderMap = new mutable.HashMap[String, Order]()
+
   @GetMapping
-  def greeting(): String = {
-    "greeting"
-  }
+  def greeting(): List[Order] = orderMap.valuesIterator.toList
 
-  def newOrder(@RequestBody order: OrderDTO): Unit = {
-
+  @PostMapping
+  @ResponseStatus(HttpStatus.CREATED)
+  def newOrder(@RequestBody order: Order): Unit = {
+    orderMap.put(UUID.randomUUID().toString, order)
   }
 
 }
