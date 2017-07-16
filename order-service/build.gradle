@@ -8,6 +8,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.cloud:spring-cloud-starter")
     testRuntime("$appLibs.pegdownTest")
-    testCompile("$appLibs.sprayTestKit")
+    testCompile("$appLibs.akkaHttpTestKit")
+    //testCompile("$appLibs.specs2")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
