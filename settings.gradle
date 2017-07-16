@@ -1,3 +1,5 @@
 rootProject.name = 'workflow-nutshell'
 include 'order-service'
+include 'imixs:order-approval-workflow'
+findProject(':imixs:order-approval-workflow')?.name = 'order-approval-workflow'
 
