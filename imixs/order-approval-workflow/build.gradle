@@ -1,2 +1,14 @@
+apply plugin: "org.springframework.boot"
+apply plugin: 'scala'
+apply plugin: "com.github.maiflai.scalatest"
+
 dependencies {
+    compile("$appLibs.scalaLibrary")
+    compile("$appLibs.scalaTest")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.cloud:spring-cloud-starter")
+    testRuntime("$appLibs.pegdownTest")
+    testCompile("$appLibs.akkaHttpTestKit")
+    //testCompile("$appLibs.specs2")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
