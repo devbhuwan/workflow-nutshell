@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation._
 
+import scala.collection.JavaConverters
+
 /**
   * @author Bhuwan Upadhyay
   *
@@ -18,7 +20,9 @@ class RESTOrderService {
   var orderApiService: OrderApiService = _
 
   @GetMapping
-  def listAll(): List[Order] = orderApiService.listOrders()
+  def listAll(): java.util.Collection[Order] = {
+    JavaConverters.asJavaCollection(orderApiService.listOrders())
+  }
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
