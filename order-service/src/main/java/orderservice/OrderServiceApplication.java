@@ -20,7 +20,6 @@ public class OrderServiceApplication {
         SpringApplication.run(OrderServiceApplication.class, args);
     }
 
-
     @Bean
     public OrderRepository orderRepository() {
         return new OrderRepository();

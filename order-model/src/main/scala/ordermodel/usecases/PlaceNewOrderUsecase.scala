@@ -23,7 +23,7 @@ class PlaceNewOrderUsecase {
     val list = validateOrderUsecase.validate(newOrder)
     if (list.isEmpty) {
       orderRepository.add(newOrder)
-      workflowProcessService.initProcess();
+      // workflowProcessService.startProcess("WF_Order", OrderBuilderHelper.variables(newOrder))
     }
     list
   }
