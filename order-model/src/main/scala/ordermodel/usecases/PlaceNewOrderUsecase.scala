@@ -16,8 +16,8 @@ class PlaceNewOrderUsecase {
   var orderRepository: OrderRepository = _
   @BeanProperty
   var validateOrderUsecase: ValidateOrderUsecase = _
-  @BeanProperty
-  var workflowProcessService: WorkflowProcessService = _
+//  @BeanProperty
+//  var workflowProcessService: WorkflowProcessService = _
 
   def newOrder(newOrder: Order): List[String] = {
     val list = validateOrderUsecase.validate(newOrder)

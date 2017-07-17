@@ -3,8 +3,7 @@ apply plugin: "com.github.maiflai.scalatest"
 
 dependencies {
     compile "org.scala-lang:scala-library:$scalaVersion"
-    testCompile "org.scalatest:scalatest_2.12:$scalaTestVersion"
     compile("io.github.devbhuwan:devbhuwan-workflow-model:$devbhuwanCloudStarter")
+    testCompile "org.scalatest:scalatest_2.12:$scalaTestVersion"
     testRuntime "org.pegdown:pegdown:$pegdownVersion"
-    testCompile("$appLibs.akkaHttpTestKit")
 }

@@ -35,7 +35,7 @@ public class OrderServiceApplication {
         PlaceNewOrderUsecase placeNewOrderUsecase = new PlaceNewOrderUsecase();
         placeNewOrderUsecase.setOrderRepository(orderRepository);
         placeNewOrderUsecase.setValidateOrderUsecase(validateOrderUsecase);
-        placeNewOrderUsecase.setWorkflowProcessService(workflowProcessService);
+        //placeNewOrderUsecase.setWorkflowProcessService(workflowProcessService);
         return placeNewOrderUsecase;
     }
 
