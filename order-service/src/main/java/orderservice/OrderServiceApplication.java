@@ -1,5 +1,6 @@
 package orderservice;
 
+import io.github.devbhuwan.workflow.model.contracts.WorkflowProcessService;
 import ordermodel.repository.OrderRepository;
 import ordermodel.service.OrderApiService;
 import ordermodel.usecases.PlaceNewOrderUsecase;
@@ -31,10 +32,11 @@ public class OrderServiceApplication {
     }
 
     @Bean
-    public PlaceNewOrderUsecase placeNewOrderUsecase(OrderRepository orderRepository, ValidateOrderUsecase validateOrderUsecase) {
+    public PlaceNewOrderUsecase placeNewOrderUsecase(OrderRepository orderRepository, ValidateOrderUsecase validateOrderUsecase, WorkflowProcessService workflowProcessService) {
         PlaceNewOrderUsecase placeNewOrderUsecase = new PlaceNewOrderUsecase();
         placeNewOrderUsecase.setOrderRepository(orderRepository);
         placeNewOrderUsecase.setValidateOrderUsecase(validateOrderUsecase);
+        placeNewOrderUsecase.setWorkflowProcessService(workflowProcessService);
         return placeNewOrderUsecase;
     }
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="WF_Order" name="OrderWorkflow" isExecutable="true">
+    <startEvent id="startEvent1" name="Create"></startEvent>
+    <userTask id="sid-73DB9562-8217-4171-98AA-3B5D726608B8" name="Place Order"></userTask>
+    <sequenceFlow id="sid-C2FB7746-F17F-48A6-B8D9-C88E24F46EFC">
+      <extensionElements>
+        <EDITOR_RESOURCEID><![CDATA[sid-C2FB7746-F17F-48A6-B8D9-C88E24F46EFC]]></EDITOR_RESOURCEID>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="sid-682971D7-0FCB-4A91-A179-F595DF747489" name="On Kitchen"></userTask>
+    <sequenceFlow id="sid-AC1B00BA-C3C8-4FE9-8627-6857CF0D4B35" sourceRef="sid-73DB9562-8217-4171-98AA-3B5D726608B8" targetRef="sid-682971D7-0FCB-4A91-A179-F595DF747489"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_WF_Order">
+    <bpmndi:BPMNPlane bpmnElement="WF_Order" id="BPMNPlane_WF_Order">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="90.0" y="135.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-73DB9562-8217-4171-98AA-3B5D726608B8" id="BPMNShape_sid-73DB9562-8217-4171-98AA-3B5D726608B8">
+        <omgdc:Bounds height="60.0" width="100.0" x="195.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-682971D7-0FCB-4A91-A179-F595DF747489" id="BPMNShape_sid-682971D7-0FCB-4A91-A179-F595DF747489">
+        <omgdc:Bounds height="63.0" width="92.0" x="342.75" y="118.5"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-AC1B00BA-C3C8-4FE9-8627-6857CF0D4B35" id="BPMNEdge_sid-AC1B00BA-C3C8-4FE9-8627-6857CF0D4B35">
+        <omgdi:waypoint x="295.0" y="150.0"></omgdi:waypoint>
+        <omgdi:waypoint x="342.75" y="150.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

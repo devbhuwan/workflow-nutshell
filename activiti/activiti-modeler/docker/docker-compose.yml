@@ -1,0 +1,4 @@
+activiti-modeler:
+  image: devbhuwan/activiti-modeler
+  ports:
+    - 8080:8080
