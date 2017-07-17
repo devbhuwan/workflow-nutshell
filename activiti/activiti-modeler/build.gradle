@@ -1,5 +1,5 @@
-apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+apply plugin: 'docker'
+apply plugin: "org.akhikhl.gretty"
 
 dependencies {
 }
@@ -8,9 +8,19 @@ gretty {
     contextPath = '/activiti'
 }
 
-def warPath= '/home/bhuwan/Downloads/activiti-6.0.0/wars'
+def warPath = '/home/bhuwan/Downloads/activiti-6.0.0/wars'
 
 farm {
-    webapp "${warPath}/activiti-admin.war"
     webapp "${warPath}/activiti-app.war"
+}
+
+task buildDocker(type: Docker, dependsOn: build) {
+    push = false
+    dockerfile = file('src/main/docker/Dockerfile')
+    doFirst {
+        copy {
+            from file("${warPath}/activiti-app.war")
+            into stageDir
+        }
+    }
 }

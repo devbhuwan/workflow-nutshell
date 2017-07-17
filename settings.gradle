@@ -6,8 +6,5 @@ include 'camunda:order-approval-workflow'
 findProject(':camunda:order-approval-workflow')?.name = 'order-approval-workflow'
 include 'activiti:order-approval-workflow'
 findProject(':activiti:order-approval-workflow')?.name = 'order-approval-workflow'
-include 'acitiviti:acitiviti-modeler'
-findProject(':acitiviti:acitiviti-modeler')?.name = 'acitiviti-modeler'
 include 'activiti:activiti-modeler'
 findProject(':activiti:activiti-modeler')?.name = 'activiti-modeler'
-

@@ -7,6 +7,8 @@ buildscript {
     }
     dependencies {
         classpath "gradle.plugin.com.github.maiflai:gradle-scalatest:0.16"
+        classpath 'se.transmode.gradle:gradle-docker:1.2'
+        classpath "gradle.plugin.org.akhikhl.gretty:gretty:2.0.0"
     }
 }
 
