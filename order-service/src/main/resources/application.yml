@@ -1,0 +1,13 @@
+devbhuwan:
+  cloud:
+    service:
+      cros-allow-orgin: false
+
+server:
+  port: 8788
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+  activiti:
+    process-definition-location-prefix: classpath:workflows

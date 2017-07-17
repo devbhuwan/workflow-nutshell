@@ -8,3 +8,5 @@ include 'activiti:order-approval-workflow'
 findProject(':activiti:order-approval-workflow')?.name = 'order-approval-workflow'
 include 'activiti:activiti-modeler'
 findProject(':activiti:activiti-modeler')?.name = 'activiti-modeler'
+include 'order-model'
+

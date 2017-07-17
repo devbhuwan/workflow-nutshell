@@ -1,7 +1,12 @@
 package orderservice;
 
+import ordermodel.repository.OrderRepository;
+import ordermodel.service.OrderApiService;
+import ordermodel.usecases.PlaceNewOrderUsecase;
+import ordermodel.usecases.ValidateOrderUsecase;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @author Bhuwan Upadhyay
@@ -12,6 +17,32 @@ public class OrderServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OrderServiceApplication.class, args);
+    }
+
+
+    @Bean
+    public OrderRepository orderRepository() {
+        return new OrderRepository();
+    }
+
+    @Bean
+    public ValidateOrderUsecase validateOrderUsecase() {
+        return new ValidateOrderUsecase();
+    }
+
+    @Bean
+    public PlaceNewOrderUsecase placeNewOrderUsecase(OrderRepository orderRepository, ValidateOrderUsecase validateOrderUsecase) {
+        PlaceNewOrderUsecase placeNewOrderUsecase = new PlaceNewOrderUsecase();
+        placeNewOrderUsecase.setOrderRepository(orderRepository);
+        placeNewOrderUsecase.setValidateOrderUsecase(validateOrderUsecase);
+        return placeNewOrderUsecase;
+    }
+
+    @Bean
+    public OrderApiService orderApiService(PlaceNewOrderUsecase placeNewOrderUsecase) {
+        OrderApiService orderApiService = new OrderApiService();
+        orderApiService.setPlaceNewOrderUsecase(placeNewOrderUsecase);
+        return orderApiService;
     }
 
 }

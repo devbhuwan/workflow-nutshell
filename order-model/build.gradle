@@ -1,0 +1,10 @@
+apply plugin: 'scala'
+apply plugin: "com.github.maiflai.scalatest"
+
+dependencies {
+    compile "org.scala-lang:scala-library:$scalaVersion"
+    testCompile "org.scalatest:scalatest_2.12:$scalaTestVersion"
+    compile("io.github.devbhuwan:devbhuwan-workflow-model:$devbhuwanCloudStarter")
+    testRuntime "org.pegdown:pegdown:$pegdownVersion"
+    testCompile("$appLibs.akkaHttpTestKit")
+}

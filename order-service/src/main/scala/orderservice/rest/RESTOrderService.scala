@@ -1,12 +1,10 @@
 package orderservice.rest
 
-import java.util.UUID
-
-import orderservice.model.Order
+import ordermodel.domain.Order
+import ordermodel.service.OrderApiService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation._
-
-import scala.collection.mutable
 
 /**
   * @author Bhuwan Upadhyay
@@ -16,15 +14,17 @@ import scala.collection.mutable
 @RequestMapping(value = Array("orders"))
 class RESTOrderService {
 
-  val orderMap = new mutable.HashMap[String, Order]()
+  @Autowired
+  var orderApiService: OrderApiService = _
 
   @GetMapping
-  def greeting(): List[Order] = orderMap.valuesIterator.toList
+  def listAll(): List[Order] = orderApiService.listOrders()
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  def newOrder(@RequestBody order: Order): Unit = {
-    orderMap.put(UUID.randomUUID().toString, order)
+  def placeNewOrder(@RequestBody order: Order): Unit = {
+    orderApiService.placeNewOrder(order)
   }
+
 
 }
