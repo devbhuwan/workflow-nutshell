@@ -1,9 +1,3 @@
-apply plugin: 'scala'
-apply plugin: "com.github.maiflai.scalatest"
-
 dependencies {
-    compile "org.scala-lang:scala-library:$scalaVersion"
     compile("io.github.devbhuwan:devbhuwan-workflow-model:$devbhuwanCloudStarter")
-    testCompile "org.scalatest:scalatest_2.12:$scalaTestVersion"
-    testRuntime "org.pegdown:pegdown:$pegdownVersion"
 }

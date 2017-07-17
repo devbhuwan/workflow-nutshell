@@ -1,15 +1,9 @@
 apply plugin: "org.springframework.boot"
-apply plugin: 'scala'
-apply plugin: "com.github.maiflai.scalatest"
 
 dependencies {
     compile("io.github.devbhuwan:devbhuwan-cloud-service-starter:$devbhuwanCloudStarter")
     compile("io.github.devbhuwan:devbhuwan-activiti-workflow-starter:$devbhuwanCloudStarter")
     compile("com.h2database:h2")
     compile project(":order-model")
-    compile "org.scala-lang:scala-library:$scalaVersion"
-    testCompile "org.scalatest:scalatest_2.12:$scalaTestVersion"
-    testRuntime "org.pegdown:pegdown:$pegdownVersion"
-    testCompile("$appLibs.akkaHttpTestKit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

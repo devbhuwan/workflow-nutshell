@@ -10,4 +10,4 @@ spring:
   datasource:
     driver-class-name: org.h2.Driver
   activiti:
-    process-definition-location-prefix: classpath:workflows
+    process-definition-location-prefix: classpath:workflows/

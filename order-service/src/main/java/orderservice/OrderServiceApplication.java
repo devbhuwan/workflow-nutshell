@@ -35,14 +35,15 @@ public class OrderServiceApplication {
         PlaceNewOrderUsecase placeNewOrderUsecase = new PlaceNewOrderUsecase();
         placeNewOrderUsecase.setOrderRepository(orderRepository);
         placeNewOrderUsecase.setValidateOrderUsecase(validateOrderUsecase);
-        //placeNewOrderUsecase.setWorkflowProcessService(workflowProcessService);
+        placeNewOrderUsecase.setWorkflowProcessService(workflowProcessService);
         return placeNewOrderUsecase;
     }
 
     @Bean
-    public OrderApiService orderApiService(PlaceNewOrderUsecase placeNewOrderUsecase) {
+    public OrderApiService orderApiService(PlaceNewOrderUsecase placeNewOrderUsecase, OrderRepository orderRepository) {
         OrderApiService orderApiService = new OrderApiService();
         orderApiService.setPlaceNewOrderUsecase(placeNewOrderUsecase);
+        orderApiService.setOrderRepository(orderRepository);
         return orderApiService;
     }
 
