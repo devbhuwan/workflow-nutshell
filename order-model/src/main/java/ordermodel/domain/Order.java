@@ -12,4 +12,5 @@ public class Order {
     private Long id;
     private String detail;
     private String state;
+    private String processInstanceId;
 }

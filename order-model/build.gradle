@@ -1,3 +1,0 @@
-dependencies {
-    compile("io.github.devbhuwan:devbhuwan-workflow-model:$devbhuwanCloudStarter")
-}

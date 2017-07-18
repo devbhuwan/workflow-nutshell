@@ -26,4 +26,14 @@ public class OrderApiService {
         return orderRepository.list();
     }
 
+    public Order findOrder(String orderId) {
+        return orderRepository.findById(orderId);
+    }
+
+    public Order saveOrder(Order order){
+        return order;
+    }
+    public Order terminate(Order order){
+        return order;
+    }
 }
