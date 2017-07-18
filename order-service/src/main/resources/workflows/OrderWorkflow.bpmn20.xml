@@ -3,11 +3,6 @@
   <process id="WF_Order" name="OrderWorkflow" isExecutable="true">
     <startEvent id="startEvent1" name="Create"></startEvent>
     <userTask id="sid-73DB9562-8217-4171-98AA-3B5D726608B8" name="Place Order"></userTask>
-    <sequenceFlow id="sid-C2FB7746-F17F-48A6-B8D9-C88E24F46EFC">
-      <extensionElements>
-        <EDITOR_RESOURCEID><![CDATA[sid-C2FB7746-F17F-48A6-B8D9-C88E24F46EFC]]></EDITOR_RESOURCEID>
-      </extensionElements>
-    </sequenceFlow>
     <userTask id="sid-682971D7-0FCB-4A91-A179-F595DF747489" name="On Kitchen"></userTask>
     <sequenceFlow id="sid-AC1B00BA-C3C8-4FE9-8627-6857CF0D4B35" sourceRef="sid-73DB9562-8217-4171-98AA-3B5D726608B8" targetRef="sid-682971D7-0FCB-4A91-A179-F595DF747489"></sequenceFlow>
   </process>

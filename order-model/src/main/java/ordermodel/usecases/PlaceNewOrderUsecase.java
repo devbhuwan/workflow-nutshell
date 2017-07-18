@@ -24,6 +24,7 @@ public class PlaceNewOrderUsecase {
     public List<String> newOrder(Order newOrder) {
         List<String> list = validateOrderUsecase.validate(newOrder);
         if (list.isEmpty()) {
+            newOrder.setState("CREATED");
             orderRepository.add(newOrder);
             workflowProcessService.startProcess("WF_Order", null);
         }

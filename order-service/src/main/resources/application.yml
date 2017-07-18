@@ -9,5 +9,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/testdb
+    username: sa
+    password: sa
   activiti:
     process-definition-location-prefix: classpath:workflows/
+    deployment-name: order-workflow
